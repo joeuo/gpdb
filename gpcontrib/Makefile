@@ -20,7 +20,15 @@ recurse_targets = gp_sparse_vector \
                gp_debug_numsegments \
                gp_distribution_policy \
                gp_internal_tools \
-               gp_inject_fault
+               gp_inject_fault \
+               gp_replica_check
+
+ifeq "${RELEASE}" "yes"
+	recurse_targets = gp_sparse_vector \
+                   gp_distribution_policy \
+                   gp_internal_tools
+endif
+
 ifeq "$(with_zstd)" "yes"
 	recurse_targets += zstd
 endif
