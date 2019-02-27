@@ -213,6 +213,13 @@ PGAC_ARG_BOOL(enable, pxf, yes,
 AC_SUBST(enable_pxf)
 
 #
+# include debug tools in gpcontrib
+#
+PGAC_ARG_BOOL(enable, debug-tools, no,
+              [build debug tools in gpcontrib])
+AC_SUBST(enable_debug_tools)
+
+#
 # orafce
 #
 PGAC_ARG_BOOL(enable, orafce, no,
