@@ -23,7 +23,7 @@ recurse_targets = gp_sparse_vector \
 ifeq "$(enable_debug_tools)" "yes"
 	recurse_targets += gp_debug_numsegments \
                gp_inject_fault \
-	       gp_replica_check
+               gp_replica_check
 endif
 ifeq "$(with_zstd)" "yes"
 	recurse_targets += zstd
