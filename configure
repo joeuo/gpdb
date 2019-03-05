@@ -777,7 +777,7 @@ GCOV
 enable_debug
 enable_gpperfmon
 enable_orafce
-enable_debug_tools
+enable_debug_extensions
 enable_pxf
 enable_gpfdist
 enable_rpath
@@ -847,7 +847,7 @@ enable_spinlocks
 enable_atomics
 enable_gpfdist
 enable_pxf
-enable_debug_tools
+enable_debug_extensions
 enable_orafce
 enable_gpperfmon
 enable_debug
@@ -1535,7 +1535,8 @@ Optional Features:
   --disable-atomics       do not use atomic operations
   --disable-gpfdist       do not use gpfdist
   --disable-pxf           do not build pxf
-  --enable-debug-tools    build debug tools in gpcontrib
+  --enable-debug-extensions
+                          include debug extensions in gpcontrib
   --enable-orafce         build with Oracle compatibility functions
   --enable-gpperfmon      build with gpperfmon
   --enable-debug          build with debugging symbols (-g)
@@ -3550,13 +3551,13 @@ fi
 
 
 #
-# include debug tools in gpcontrib
+# include debug extensions in gpcontrib
 #
 
 
-# Check whether --enable-debug-tools was given.
-if test "${enable_debug_tools+set}" = set; then :
-  enableval=$enable_debug_tools;
+# Check whether --enable-debug-extensions was given.
+if test "${enable_debug_extensions+set}" = set; then :
+  enableval=$enable_debug_extensions;
   case $enableval in
     yes)
       :
@@ -3565,12 +3566,12 @@ if test "${enable_debug_tools+set}" = set; then :
       :
       ;;
     *)
-      as_fn_error $? "no argument expected for --enable-debug-tools option" "$LINENO" 5
+      as_fn_error $? "no argument expected for --enable-debug-extensions option" "$LINENO" 5
       ;;
   esac
 
 else
-  enable_debug_tools=no
+  enable_debug_extensions=no
 
 fi
 
